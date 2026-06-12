@@ -1,0 +1,122 @@
+/* ---- Page hero (shared) ---- */
+.page-hero {
+  background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%);
+  padding: 48px 0 40px;
+}
+.page-hero__title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.page-hero__sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.72);
+}
+
+/* ---- Page body ---- */
+.lic-page__body {
+  padding-top: 32px;
+  padding-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ---- Search box ---- */
+.search-box {
+  padding: 28px 28px 24px;
+}
+.search-box__title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--navy-900);
+}
+.search-box__fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 16px;
+  align-items: end;
+}
+.search-box__submit {
+  height: 44px;
+  white-space: nowrap;
+}
+
+/* ---- Results header ---- */
+.lic-results__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.lic-results__count {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy-900);
+}
+.lic-results__info {
+  font-size: 13px;
+  color: var(--gray-400);
+}
+
+/* ---- Licitacion card ---- */
+.lic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lic-card {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lic-card__top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.lic-card__code {
+  font-family: monospace;
+  font-size: 13px;
+  color: var(--gray-400);
+  background: var(--gray-100);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.lic-card__title {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy-900);
+  line-height: 1.4;
+}
+
+.lic-card__meta {
+  font-size: 13px;
+  color: var(--gray-600);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.lic-card__btn {
+  align-self: flex-start;
+  font-size: 13px;
+  padding: 7px 16px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .search-box__fields {
+    grid-template-columns: 1fr;
+  }
+  .search-box__submit { width: 100%; justify-content: center; }
+  .lic-results__header { flex-direction: column; gap: 4px; }
+}
